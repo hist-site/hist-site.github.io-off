@@ -58,16 +58,9 @@ body {
 	border-radius: 25px;
 	border-bottom: 4px solid #d00d56;
 }
+@media (max-width: 1280px) {
 
-@media (max-width: 1230px) {
-
-	#conteiner {
-		text-align: right;
-	}
-
-@media (max-width: 575px) {
-
-	#conteiner {
-		text-align: left;
+	#conteiner>.content>a {
+		padding: 10px 100px;
 	}
 }
