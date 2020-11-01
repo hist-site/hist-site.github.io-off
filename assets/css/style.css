@@ -1432,7 +1432,7 @@ hr {
         top: 100%;
         left: 0;
 
-        background-color: #eb8b8d;
+        background: linear-gradient(to right,#ff8a00,#da1b60);
     }
 
     .nav.active {
