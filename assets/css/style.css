@@ -437,7 +437,7 @@ hr {
 }
 
 .card__img {
-    background: linear-gradient(to bottom, #f38181, #fce38a);
+    background: linear-gradient(to right,#ff8a00,#da1b60);
 
     transition: transform .2s linear;
 }
