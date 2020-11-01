@@ -29,13 +29,13 @@ body {
 	text-align: center;
 }
 #conteiner>.content>h2 {
-	font-size: 18vw;
+	font-size: 325px;
 	color: #fff;
 	line-height: 1em;
 }
 #conteiner>.content>h4 {
 	position: relative;
-	font-size: 1.5em;
+	font-size: 25px;
 	margin-bottom: 20px;
 	color: #111;
 	background: #fff;
@@ -45,7 +45,7 @@ body {
 }
 #conteiner>.content>p {
 	color: #fff;
-	font-size: 1.2em;
+	font-size: 19px;
 }
 #conteiner>.content>a {
 	position: relative;
@@ -57,4 +57,17 @@ body {
 	margin-top: 25px;
 	border-radius: 25px;
 	border-bottom: 4px solid #d00d56;
+}
+
+@media (max-width: 1230px) {
+
+	#conteiner {
+		text-align: right;
+	}
+
+@media (max-width: 575px) {
+
+	#conteiner {
+		text-align: left;
+	}
 }
