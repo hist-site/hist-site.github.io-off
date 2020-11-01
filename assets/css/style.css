@@ -839,7 +839,7 @@ hr {
 .works__item {
     position: relative;
 
-    background: linear-gradient(to bottom, #f38181, #fce38a);
+   background: linear-gradient(to right,#ff8a00,#da1b60);
 }
 
 .works__item:hover .works__image {
