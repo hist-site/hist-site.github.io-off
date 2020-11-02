@@ -25,7 +25,7 @@ body {
 	box-shadow: 0 15px 30px rgba(0,0,0,.5)
 }
 #conteiner>.content {
-	max-width: 600px;
+	max-width: 100%;
 	text-align: center;
 }
 #conteiner>.content>h2 {
@@ -63,4 +63,5 @@ body {
 	#conteiner>.content>a {
 		padding: 10px 100px;
 	}
+
 }
