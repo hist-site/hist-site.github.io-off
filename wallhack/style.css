@@ -26,6 +26,7 @@ h1,h2{
 	background: #0c1013;
 	padding: 10px;
 	text-align: center;
+	margin-top:	5px;
 }
 
 #footer{
@@ -37,12 +38,19 @@ h1,h2{
 
 .conteiner{
  	width: 70%;
- 	height: 100%;
- 	margin: 10px auto;
+ 	min-height: 100vh;
+ 	margin: auto;
+ 	display: flex;
+ 	flex-direction: column;
+}
+
+.content{
+	display: flex;
+	height: 100%;
 }
 
 .collumn-block{
-	margin: 8px;
+	margin: 5px auto;
 	width: 48%;
 	background: #0c1013;
 	display: inline-block;
@@ -51,6 +59,7 @@ h1,h2{
 .collumn-block>.inner{
 	margin: 5px;
 	justify-content: center;
+	height: 77vh;
 }
 
 .h-line {
