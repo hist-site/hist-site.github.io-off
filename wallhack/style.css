@@ -120,6 +120,7 @@ h1,h2{
   border-radius: 50%;
   position: relative;
   z-index: 3;
+  animation: animate 2s linear infinite;
 }
 .menu-btn span,
 .menu-btn span::before,
@@ -221,4 +222,25 @@ h1,h2{
 
 .fab, .fas{
 	font-size: 20px;
+}
+
+
+
+@keyframes animate {
+  0%
+  {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .1), 0 0 0 0 rgba(255, 255, 255, .0);;
+  }
+  40%
+  {
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, .0), 0 0 0 0 rgba(255, 255, 255, .0);;
+  }
+  80%
+  {
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, .0), 0 0 0 5px rgba(255, 255, 255, .0);;
+  }
+  100%
+  {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .0), 0 0 0 5px rgba(255, 255, 255, .0);;
+  }    
 }
