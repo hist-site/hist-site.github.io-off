@@ -10,11 +10,11 @@
   justify-content: center;
   background: rgba(0,0,0, .4);
   transition: 0.5s;
-  transform: translateY(100%);
+  transform: translateX(100%);
 }
 
 #menu-guild.active {
-  transform: translateY(0%);
+  transform: translateX(0%);
 }
 
 #menu-info{
