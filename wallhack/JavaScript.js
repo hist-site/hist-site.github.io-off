@@ -5,8 +5,3 @@ $(function(){
   	$('.menu').toggleClass('menu_active');
 	});
 });
-
-
-
-
-
