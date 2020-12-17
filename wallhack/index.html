@@ -62,16 +62,13 @@
 	</div>
 </div>
 
-	<div id="menu-guild">
-	<div class="menu-btn-off" onclick="menu_on()"><span></span></div>
-	<nav class="menu-list"><a href="#">Текст</a><a href="#">Текст</a><a href="#">Текст</a><a href="#">Текст</a></nav>
-	</div>
 	<div id="menu-info-back"></div>
-	<div id="menu-info"></div>
+	<div id="menu-info">
+		<div class="menu-btn-off" onclick="menu_on()"><span></span></div>
+	</div>
 
 <script>
 	function menu_on() {
-		document.getElementById('menu-guild').classList.toggle('active');
 		document.getElementById('menu-info').classList.toggle('info-active');
 		document.getElementById('menu-info-back').classList.toggle('back-info-active');
 		document.getElementById('wrapper').classList.toggle('wrapper_active');

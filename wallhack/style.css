@@ -53,11 +53,11 @@ a{
  	display: flex;
  	flex-direction: column;
  	transition: 0.5s;
-  	transform: translateX(0%);
+  	transform: translateY(0%);
 }
 
 #wrapper.wrapper_active {
-  	transform: translateX(175%);
+  	transform: translateY(175%);
 }
 
 .content{
