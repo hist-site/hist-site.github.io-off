@@ -10,15 +10,18 @@
 
 body {
     font-family: 'Montserrat', sans-serif;  
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
     color: #d1d1d1;
     background: #14171a;
     height: 97vh;
+    overflow-x: hidden;
+    z-index: 1;
 }
 
-h1,h2{
+h1,h2,h3{
 	margin: auto;
+	padding: 0;
 } 
 
 #header{
@@ -36,14 +39,21 @@ h1,h2{
 	background: #0c1013;
 	padding: 10px;
 	display: flex;
+	justify-content: center;
 }
 
-.wrapper{
+#wrapper{
  	width: 70%;
  	min-height: 100vh;
  	margin: auto;
  	display: flex;
  	flex-direction: column;
+ 	transition: 0.5s;
+  	transform: translateX(0%);
+}
+
+#wrapper.wrapper_active {
+  	transform: translateX(175%);
 }
 
 .content{
