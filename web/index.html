@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Вікіпедія</title>
+	<script src="eel.js"></script>
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+</head>	
+<body>
+	<div id="content">
+		<input id="inquiry" type="text" placeholder="Введіть запит пошуку ..." required="" value="">
+
+		<button id="show" onclick="display_wiki_info()">Знайти информацію</button>
+
+		<span class="line"></span>
+
+		<div id="ready"></div>
+
+		<div class="menu-btn-on" onclick="menu_on()"><span></span></div>
+	</div>
+
+	<div id="menu">
+		<div class="menu-btn-off" onclick="menu_on()"><span></span></div>
+		    	<nav class="menu-list">
+		      	<a href="#">Головна</a>
+		      	<a href="#">Налаштування</a>
+		      	<a href="#">Контакти</a>
+		      	<a href="#">Портфоліо</a>
+		    	</nav>
+	</div>
+	<div id="menu-info-back"></div>
+	<div id="menu-info"></div>
+
+
+	
+	<script>
+		async function display_wiki_info() {
+			//let inf = document.getElementById('inquiry').value;
+
+			let res = eel.insertText();
+			document.getElementById('ready').innerHTML = res;
+		}
+
+		function menu_on() {
+			document.getElementById('menu').classList.toggle('active');
+			document.getElementById('menu-info').classList.toggle('info-active');
+			document.getElementById('menu-info-back').classList.toggle('back-info-active');
+			document.getElementById('content').classList.toggle('content_active');
+		}
+	</script>
+</body>
+</html>

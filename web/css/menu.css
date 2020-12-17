@@ -1,0 +1,189 @@
+#menu {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0, .4);
+  transition: 0.5s;
+  transform: translateX(100%);
+}
+
+#menu.active {
+  transform: translateX(0%);
+}
+
+#menu-info{
+  position: fixed;
+  left: 0;top: 0;
+  z-index: 99;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255, .1); 
+  transition: 0.5s;
+  transform: translateY(-100%);
+}
+
+#menu-info.info-active {
+  transform: translateX(0%);
+}
+
+#menu-info-back {
+  position: fixed;
+  left: 0;top: 0;
+  z-index: 99;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255, .1); 
+  transition: 0.5s;
+  transform: translateY(100%);
+}
+
+#menu-info-back.back-info-active {
+  transform: translateX(0%);
+}
+
+
+.menu-btn-on {
+  background: rgba(255, 255, 255, .2);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: rgba(255, 255, 255, .3);
+  animation: menu-btn-anim 2s linear infinite;
+}
+
+@keyframes menu-btn-anim {
+  0%
+  {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .1), 0 0 0 0 rgba(255, 255, 255, .0);
+  }
+  40%
+  {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, .0), 0 0 0 0 rgba(255, 255, 255, .0);
+  }
+  80%
+  {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, .0), 0 0 0 8px rgba(255, 255, 255, .0);
+  }
+  100%
+  {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .0), 0 0 0 8px rgba(255, 255, 255, .0);
+  }    
+}
+
+.menu-btn-on span,
+.menu-btn-on span::before,
+.menu-btn-on span::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+.menu-btn-on span::before,
+.menu-btn-on span::after {
+  content: '';
+  display: block;
+}
+.menu-btn-on span::before {
+  transform: translateY(-5px);
+}
+.menu-btn-on span::after {
+  transform: translateY(5px);
+}
+
+.menu-btn-off {
+  background: rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.menu-btn-off:hover {
+  background: #ff4726;
+}
+
+.menu-btn-off span::before,
+.menu-btn-off span::after {
+  position: absolute;
+  top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+.menu-btn-off span::before,
+.menu-btn-off span::after {
+  content: '';
+  display: block;
+}
+.menu-btn-off span::before {
+  transform: rotate(-45deg);
+}
+.menu-btn-off span::after {
+  transform: rotate(45deg);
+}
+
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  flex-direction: column;
+}
+
+.menu-list > a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 25px;
+  width: 220px;
+  text-align: center;
+  font-size: 18px;
+  outline: none;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.menu-list > a:hover {
+  background: rgba(255, 255, 255, .3);
+  border-color: rgba(255, 255, 255, .5);
+  animation: menu-list-a-anim 1s linear infinite;
+}
+
+@keyframes menu-list-a-anim {
+  0%
+  {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .2);
+  }
+  100%
+  {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, .0);
+  }    
+}
