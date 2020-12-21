@@ -12,7 +12,7 @@
 <body>
 
 <!-- Wrapper -->
-<div id="wrapper">
+<div class="wrapper">
 
 	<!-- Header -->
 	<header id="header"><h1>Counter-Strike: Global Offensive</h1></header>
@@ -49,7 +49,7 @@
 		      	<a href="https://t.me/csgowh" target="_blank">
 		      		<i class="fab fa-telegram-plane"></i>
 				</a>
-				<a href="#" class="menu-btn-on" onclick="menu_on()">
+				<a href="#" class="menu-btn-on">
 		      		<i class="fas fa-info"></i>
 				</a>
 		    </nav>
@@ -62,18 +62,19 @@
 	</div>
 </div>
 
-	<div id="menu-info-back"></div>
-	<div id="menu-info">
-		<div class="menu-btn-off" onclick="menu_on()"><span></span></div>
+	<div class="menu-info">
+		<div class="collumn-block--info">
+			<div class="inner">
+				<h2>Как это работает</h2>
+				<span class="h-line"></span>
+				- Установка файла<br>
+				- Запуск игры<br>
+				- Запуск файла<br>
+				- Играем<br>
+			</div>
+		</div>
+		<a class="menu-btn-off"><i class="fas fa-times"></i></a>
 	</div>
-
-<script>
-	function menu_on() {
-		document.getElementById('menu-info').classList.toggle('info-active');
-		document.getElementById('menu-info-back').classList.toggle('back-info-active');
-		document.getElementById('wrapper').classList.toggle('wrapper_active');
-	}
-</script>
 
 </body>
 </html>
