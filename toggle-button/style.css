@@ -64,23 +64,23 @@ input.toggle-control:checked + label::after {
 
 @media only screen and (max-width: 1200px){
   input.toggle-control + label {
-  width: 77px;
-  height: 50px;
+  width: 90px;
+  height: 60px;
 
   cursor: pointer;
   outline: none;
   user-select: none;
 }
 input.toggle-control + label::after {
-  width: 48px;
+  width: 58px;
 }
 
 input.toggle-control:checked + label::after {
-  margin-left: 27px;
+  margin-left: 31px;
 }
 
 h1{
-  font-size: 42px;
+  font-size: 52px;
 }
 }
 
