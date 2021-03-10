@@ -90,22 +90,22 @@ h1{
 
 @media (max-width: 720px){
   input.toggle-control + label {
-  width: 170px;
-  height: 100px;
+  width: 270px;
+  height: 200px;
 
   cursor: pointer;
   outline: none;
   user-select: none;
 }
 input.toggle-control + label::after {
-  width: 98px;
+  width: 198px;
 }
 
 input.toggle-control:checked + label::after {
-  margin-left: 71px;
+  margin-left: 171px;
 }
 
 h1{
-  font-size: 92px;
+  font-size: 142px;
 }
 }
