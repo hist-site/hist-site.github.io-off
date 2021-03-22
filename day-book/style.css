@@ -6,7 +6,8 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: #d1d1d1;
   margin: 0 auto;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 caption{
 	font-size: 26px;
@@ -17,16 +18,17 @@ table,tr,td{
 	padding: 5px;
 	border-collapse: collapse;
 	width: 200px;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .lesson{
 	width: 30px;
 	text-align: center;
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1000px){
 body{
-	display: block;
-	width: 25%;
+	justify-content: flex-start;
 }
 caption{
 	font-size: 46px;
