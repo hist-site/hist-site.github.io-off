@@ -23,3 +23,10 @@ table,tr,td{
 	width: 30px;
 	text-align: center;
 }
+
+@media (max-width: 720px){
+body{
+	display: block;
+	widows: 25%;
+}
+}
