@@ -26,6 +26,6 @@ table,tr,td{
 @media (max-width: 720px){
 body{
 	display: block;
-	widows: 25%;
+	width: 25%;
 }
 }
