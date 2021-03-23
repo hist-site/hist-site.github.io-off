@@ -42,7 +42,7 @@ table {
 }
 
 .section {
-    padding: 120px 0;
+    padding: 300px 0;
 }
 
 .container {
@@ -61,7 +61,7 @@ table {
 
 .reviews__item {
     min-height: 210px;
-    padding-left: 245px;
+    padding-left: 200px;
     position: relative;
 }
 
