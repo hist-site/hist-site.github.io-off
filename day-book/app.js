@@ -5,13 +5,13 @@ const renderCalendar = () => {
   const monthDays = document.querySelector(".days");
 
   const days = [
-    	"Понеділок",
-    	"Вівторок",
-   		"Середа",
-    	"Четвер",
-    	"П'ятниця",
-    	"Субота",
-    	"Неділя",
+    "Понеділок",
+    "Вівторок",
+   	"Середа",
+    "Четвер",
+    "П'ятниця",
+    "Субота",
+    "Неділя",
   ];
 
   document.querySelector(".date h1").innerHTML = days[date.getDay()];
