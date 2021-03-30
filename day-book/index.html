@@ -3,11 +3,31 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 	<title>Щоденник</title>
 </head>
 <body>
-<div class="page">
+    <div class="container">
+      <div class="day-book">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+      </div>
+    </div>
+
+<!-- <div class="container">
+	<header>
+		<div class="header-content">
+			<div class="days"><h1></h1></div>
+		</div>
+	</header>
+
+
     <div class="section">
         <div class="container">
 
@@ -17,7 +37,8 @@
                         <div class="reviews__item">
                            	<table>
 								<tbody>
-									<caption>Понеділок</caption>
+									<i class="fas fa-angle-left prev"></i>
+									<caption></caption>
 						     		<tr><td class="lesson">1.</td><td>Фізика</td></tr>
 						     		<tr><td class="lesson">2.</td><td>Хімія</td></tr>
 						     		<tr><td class="lesson">3.</td><td>Історія У.</td></tr>
@@ -25,16 +46,17 @@
 						     		<tr><td class="lesson">5.</td><td>Алгебра</td></tr>
 						     		<tr><td class="lesson">6.</td><td>Англ-мова</td></tr>
 						     		<tr><td class="lesson">7.</td><td>Укр-літ</td></tr>
+						     		<i class="fas fa-angle-right next"></i>
 								</tbody>
 							</table>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div>
+                    <!-- <div>
                         <div class="reviews__item">
 							<table>
 								<tbody>
-									<caption>Вівторок</caption>
+									<caption></caption>
 						     		<tr><td class="lesson">1.</td><td>З.У.</td></tr>
 						     		<tr><td class="lesson">2.</td><td>Фіз-ра</td></tr>
 						     		<tr><td class="lesson">3.</td><td>Фізика</td></tr>
@@ -51,7 +73,7 @@
                         <div class="reviews__item">
 							<table>
 								<tbody>
-									<caption>Середа</caption>
+									<caption></caption>
 							     	<tr><td class="lesson">1.</td><td>Інформатика</td></tr>
 							    	<tr><td class="lesson">2.</td><td>З.У.</td></tr>
 							  		<tr><td class="lesson">3.</td><td>Фіз-ра</td></tr>
@@ -68,7 +90,7 @@
                         <div class="reviews__item">
 							<table>
 								<tbody>
-									<caption>Четвер</caption>
+									<caption></caption>
 						     		<tr><td class="lesson">1.</td><td>Фіз-ра</td></tr>
 						     		<tr><td class="lesson">2.</td><td>Укр-мова</td></tr>
 						     		<tr><td class="lesson">3.</td><td>Укр-літ</td></tr>
@@ -85,7 +107,7 @@
                         <div class="reviews__item">
 							<table>
 								<tbody>
-									<caption>П'ятниця</caption>
+									<caption></caption>
 						     		<tr><td class="lesson">1.</td><td>Англ-мова</td></tr>
 						     		<tr><td class="lesson">2.</td><td>Фізика</td></tr>
 						     		<tr><td class="lesson">3.</td><td>Нім-мова</td></tr>
@@ -96,7 +118,7 @@
 								</tbody>
 							</table>	
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -107,9 +129,6 @@
 
 
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="app.js"></script>
 
 </body>

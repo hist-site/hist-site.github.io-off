@@ -1,148 +1,97 @@
-body {
-  background: #14171a;
-  width: 100%;
-  height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  color: #d1d1d1;
-  font-style: italic;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
-}
-
-*,*:before,*:after {
-    box-sizing: border-box;
-    outline: none;
-}
-
-caption {
-	font-size: 26px;
-}
-
-table {
-	border: 2px solid #0c1013;
-	border-radius: 20px;
-	font-size: 22px;
-	padding: 5px;
-	border-collapse: separate;
-	border-spacing: 10px;
-	width: 200px;
-	background: #0c1013;
-}
-
-.page {
-	margin: 0 auto;
-    overflow: hidden;
-}
-
-.lesson {
-	width: 30px;
-	text-align: center;
-}
-
-.section {
-    padding: 600px 0;
+  font-size: 62.5%;
 }
 
 .container {
-    width: 100%;
-    max-width: 1230px;
-    padding: 0 15px;
+  width: 100%;
+  height: 100vh;
+  background-color: #12121f;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.reviews {
-    position: relative;
+.day-book {
+  width: 45rem;
+  height: 52rem;
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
-.reviews .slick-slider {
-    padding: 0 110px;
+.month {
+  width: 100%;
+  height: 12rem;
+  background-color: #167e56;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-.reviews__item {
-    min-height: 210px;
-    padding-left: 200px;
-    position: relative;
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
 }
 
-.slick-arrow {
-    display: block;
-    font-size: 0;
-    color: transparent;
-
-    border: 0;
-    background: none;
-    cursor: pointer;
-
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    transform: translateY(-50%);
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
 }
 
-.slick-arrow {
-    display: block;
-    font-size: 0;
-    color: transparent;
-
-    border: 0;
-    background: none;
-    cursor: pointer;
-
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    transform: translateY(-50%);
+.month p {
+  font-size: 1.6rem;
 }
 
-.slick-arrow:focus {
-    outline: 0;
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
 }
 
-.slick-arrow:after {
-    content: "";
-    display: block;
-    width: 26px;
-    height: 26px;
-
-    border-top: 3px solid #ccc;
-    border-left: 3px solid #ccc;
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s;
 }
 
-.slick-prev {
-    left: 0;
-    transform: rotate(-45deg);
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
+  cursor: pointer;
 }
 
-.reviews__btn--next,
-.slick-next {
-    right: 0;
-    transform: rotate(135deg);
+.prev-date,
+.next-date {
+  opacity: 0.5;
 }
 
-.reviews .slick-slider {
-    padding: 0 60px;
-}
-
-
-@media only screen and (max-width: 1000px){
-
-caption {
-	font-size: 51px;
-}
-
-table {
-	border: 4px solid #0c1013;
-	border-radius: 20px;
-	font-size: 45px;
-	padding: 8px;
-	border-collapse: separate;
-	border-spacing: 10px;
-	width: 450px;
-	background: #0c1013;
-}
-
-td.lesson {
-	padding: 5px 10px 5px 5px;
-}
+.today {
+  background-color: #167e56;
 }
