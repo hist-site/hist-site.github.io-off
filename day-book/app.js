@@ -1,30 +1,33 @@
-const date = new Date(2021,1,2,0);
+const date = new Date();
 
-const renderCalendar = () => {
+const renderDayBook = () => {
 
-  const monthDays = document.querySelector(".days");
+  const Days = document.querySelector(".days");
 
   const days = [
+    "Неділя",
     "Понеділок",
     "Вівторок",
    	"Середа",
     "Четвер",
     "П'ятниця",
     "Субота",
-    "Неділя",
   ];
 
   document.querySelector(".date h1").innerHTML = days[date.getDay()];
 
 };
 
-document.querySelector(".prev").addEventListener("click", () => {
-  date.setDate(date.getDay() - 1);
-  renderCalendar();
-});
+// document.querySelector(".prev").addEventListener("click", () => {
+//   date.setDate(date.getDay() - 1);
+//   renderDayBook();
+//   console.log(date);
+// });
 
-document.querySelector(".next").addEventListener("click", () => {
-  date.setDate(date.getDay() + 1);
-  renderCalendar();
-});
-renderCalendar();
+// document.querySelector(".next").addEventListener("click", () => {
+//   date.setDate(date.getDay() + 1);
+//   renderDayBook();
+//   console.log(date);
+// });
+renderDayBook();
+//console.log(date);
