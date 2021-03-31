@@ -14,6 +14,9 @@ const renderDayBook = () => {
     "Субота",
   ];
 
+  const bd = [
+  ];
+
   document.querySelector(".date h1").innerHTML = days[date.getDay()];
 
 };
