@@ -13,7 +13,7 @@ html {
   width: 100%;
   height: 100vh;
   background-color: #0c1013;
-  color: #d1d1d1;
+  color: #f9fbf3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ html {
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 
-.month {
+.days {
   width: 100%;
   height: 12rem;
   background-color: #341a3d;
@@ -38,21 +38,12 @@ html {
   text-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 50%);
 }
 
-.month i {
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
-.month h1 {
+.days h1 {
   font-size: 5rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-bottom: 1rem;
-}
-
-.month p {
-  font-size: 1.6rem;
 }
 
 .weekdays {
@@ -94,4 +85,24 @@ html {
 
 .today {
   background-color: #167e56;
+}
+
+.tables {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    text-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 50%);
+}
+
+table, tr, td {
+    font-size: 42px;
+    border-collapse: collapse;
+}
+
+.lesson {
+    width: 30px;
+    text-align: center;
 }
