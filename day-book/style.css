@@ -193,9 +193,7 @@ table, tr, td {
 }
 
 .collumn-block--info{
-  margin: auto;
   background: #341a3d;
-  display: inline-block;
   border-radius: 25px 0px 25px 0px;
   width: 520px;
   height: 660px;
