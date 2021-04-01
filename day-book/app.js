@@ -1,3 +1,18 @@
+$(function(){
+
+  $('.menu-btn-on').on('click', function(e) {
+    e.preventDefault();
+  $('.menu-time').toggleClass('menu-time_active');
+  $('.container').toggleClass('container_active');
+  });
+
+  $('.menu-btn-off').on('click', function(e) {
+    e.preventDefault();
+  $('.menu-time').toggleClass('menu-time_active');
+  $('.container').toggleClass('container_active');
+  });
+});
+
 const date = new Date();
 
 const renderDayBook = () => {
@@ -41,8 +56,7 @@ const renderDayBook = () => {
 					<tr><td class="lesson">3.</td><td>Укр-літ</td></tr>
 					<tr><td class="lesson">4.</td><td>Географія</td></tr>
 					<tr><td class="lesson">5.</td><td>Алгебра</td></tr>
-					<tr><td class="lesson">6.</td><td>Геометрія</td></tr>
-					<tr><td class="lesson">7.</td><td></td></tr>`;
+					<tr><td class="lesson">6.</td><td>Геометрія</td></tr>`;
 
   const friday = `<tr><td class="lesson">1.</td><td>Англ-мова</td></tr>
 			 		<tr><td class="lesson">2.</td><td>Фізика</td></tr>
@@ -85,19 +99,3 @@ const renderDayBook = () => {
 //   console.log(date);
 // });
 renderDayBook();
-console.log(date);
-
-$(function(){
-
-  $('.menu-btn-on').on('click', function(e) {
-    e.preventDefault();
-  $('.menu-time').toggleClass('menu-time_active');
-  $('.container').toggleClass('container_active');
-  });
-
-  $('.menu-btn-off').on('click', function(e) {
-    e.preventDefault();
-  $('.menu-time').toggleClass('menu-time_active');
-  $('.container').toggleClass('container_active');
-  });
-});
