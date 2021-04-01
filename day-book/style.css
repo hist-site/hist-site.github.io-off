@@ -12,16 +12,22 @@ html {
 body {
     background-color: #221126;
     height: 100vh;
+    color: #f9fbf3;
 }
 
 .container {
   width: 100%;
   height: 100%;
   background-color: #0c1013;
-  color: #f9fbf3;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.4s;
+  transform: translateY(0%);
+}
+
+.container_active {
+    transform: translateY(-100%);
 }
 
 .day-book {
@@ -110,4 +116,100 @@ table, tr, td {
 .lesson {
     width: 40px;
     text-align: center;
+}
+
+
+
+.menu-time{
+  position: fixed;
+  left: 0;top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*background: rgba(255,255,255, .1); */
+  transition: 0.4s;
+  transform: translateY(-100%);
+}
+
+.menu-time_active {
+  transform: translateY(0%);
+}
+
+@keyframes animate {
+  0%
+  {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .1), 0 0 0 0 rgba(255, 255, 255, .0);;
+  }
+  40%
+  {
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, .0), 0 0 0 0 rgba(255, 255, 255, .0);;
+  }
+  80%
+  {
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, .0), 0 0 0 5px rgba(255, 255, 255, .0);;
+  }
+  100%
+  {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .0), 0 0 0 5px rgba(255, 255, 255, .0);;
+  }    
+}
+
+.menu-btn-on {
+  background: rgba(182, 70, 240, .5);
+  color: #f9fbf3;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  padding-top: 14px;
+  animation: animate 2s linear infinite;
+}
+
+.menu-btn-off {
+  background: rgba(182, 70, 240, .5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collumn-block>.inner{
+    margin: 5px;
+    justify-content: center;
+    height: 79vh;
+}
+
+.collumn-block--info{
+  margin: auto;
+  width: 30%;
+  background: #341a3d;
+  display: inline-block;
+  border-radius: 25px 0px 25px 0px;
+}
+
+.collumn-block--info>.inner{
+  margin: 10px;
+  text-align: left;
+  height: 40vh;
+}
+
+.collumn-block--info>.inner>h2{
+  text-align: center;
+}
+
+.far{
+    font-size: 25px;
 }

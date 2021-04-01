@@ -86,3 +86,18 @@ const renderDayBook = () => {
 // });
 renderDayBook();
 console.log(date);
+
+$(function(){
+
+  $('.menu-btn-on').on('click', function(e) {
+    e.preventDefault();
+  $('.menu-time').toggleClass('menu-time_active');
+  $('.container').toggleClass('container_active');
+  });
+
+  $('.menu-btn-off').on('click', function(e) {
+    e.preventDefault();
+  $('.menu-time').toggleClass('menu-time_active');
+  $('.container').toggleClass('container_active');
+  });
+});
