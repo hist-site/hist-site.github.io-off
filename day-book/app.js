@@ -17,13 +17,13 @@ var date = new Date();
 
   let days = function (day) {
     switch (day) {
+      case 0: return"Неділя";
       case 1: return"Понеділок";
       case 2: return"Вівторок";
       case 3: return"Середа";
       case 4: return"Четвер";
       case 5: return"П'ятниця";
       case 6: return"Субота";
-      case 7: return"Неділя";
       default: return "Вихідні, іди гуляй дурачок";
     }
   }
@@ -46,7 +46,7 @@ const renderDayBook = () => {
 		     		<tr><td class="lesson">6.</td><td>Укр-мова</td></tr>
 		     		<tr><td class="lesson">7.</td><td>Укр-літ</td></tr>`;
 
-  const wednesday = `tr><td class="lesson">1.</td><td>Інформатика</td></tr>
+  const wednesday = `<td class="lesson">1.</td><td>Інформатика</td></tr>
 			    	<tr><td class="lesson">2.</td><td>З.У.</td></tr>
 			  		<tr><td class="lesson">3.</td><td>Фіз-ра</td></tr>
 		    		<tr><td class="lesson">4.</td><td>Укр-мова</td></tr>
@@ -87,18 +87,21 @@ const renderDayBook = () => {
   else if (date.getDay() == 5) {
   	table.innerHTML = friday;
   }
+  else{
+    table.innerHTML = "Вихідні, іди гуляй дурачок"
+  }
 
 };
 renderDayBook();
 
-// document.querySelector(".prev").addEventListener("click", () => {
-//   days();
-//   renderDayBook();
-//   console.log(date);
-// });
+document.querySelector(".prev").addEventListener("click", () => {
+  date = new Date(date.getFullYear(), date.getMonth(), (date.getDate()-1));
+  renderDayBook();
+  console.log(date);
+});
 
-// document.querySelector(".next").addEventListener("click", () => {
-//   date = new Date(date.getFullYear(), date.getMonth(), date.getDate()+( 0 + date.getDay()));
-//   renderDayBook();
-//   console.log(date);
-// });
+document.querySelector(".next").addEventListener("click", () => {
+  date = new Date(date.getFullYear(), date.getMonth(), (date.getDate()+1));
+  renderDayBook();
+  console.log(date);
+});
