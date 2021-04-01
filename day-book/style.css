@@ -128,9 +128,7 @@ tbody {
   bottom: 40px;
   right: 30px;
   text-align: center;
-  font-weight: bold;
   cursor: pointer;
-  justify-content: center;
   padding-top: 25px;
   animation: animate 2s linear infinite;
 }
