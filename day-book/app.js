@@ -13,19 +13,22 @@ $(function(){
   });
 });
 
-const date = new Date();
+var date = new Date();
+
+  let days = function (day) {
+    switch (day) {
+      case 1: return"Понеділок";
+      case 2: return"Вівторок";
+      case 3: return"Середа";
+      case 4: return"Четвер";
+      case 5: return"П'ятниця";
+      case 6: return"Субота";
+      case 7: return"Неділя";
+      default: return "Вихідні, іди гуляй дурачок";
+    }
+  }
 
 const renderDayBook = () => {
-
-  const days = [
-    "Неділя",
-    "Понеділок",
-    "Вівторок",
-   	"Середа",
-    "Четвер",
-    "П'ятниця",
-    "Субота",
-  ];
 
   const monday = `<tr><td class="lesson">1.</td><td>Фізика</td></tr>
 		     		<tr><td class="lesson">2.</td><td>Хімія</td></tr>
@@ -66,7 +69,7 @@ const renderDayBook = () => {
 		     		<tr><td class="lesson">6.</td><td>Укр-літ</td></tr>
 		     		<tr><td class="lesson">7.</td><td>Інформатика</td></tr>`;
 
-  document.querySelector(".date h1").innerHTML = days[date.getDay()];
+  document.querySelector(".date h1").innerHTML = days(date.getDay());
   const table = document.querySelector("tbody");
 
   if (date.getDay() == 1) {
@@ -86,16 +89,16 @@ const renderDayBook = () => {
   }
 
 };
+renderDayBook();
 
 // document.querySelector(".prev").addEventListener("click", () => {
-//   date.setDate(date.getDay() - 1);
+//   days();
 //   renderDayBook();
 //   console.log(date);
 // });
 
 // document.querySelector(".next").addEventListener("click", () => {
-//   date.setDate(date.getDay() + 1);
+//   date = new Date(date.getFullYear(), date.getMonth(), date.getDate()+( 0 + date.getDay()));
 //   renderDayBook();
 //   console.log(date);
 // });
-renderDayBook();
