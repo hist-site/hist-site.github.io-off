@@ -33,12 +33,12 @@ var date = new Date();
 const renderDayBook = () => {
 
   const monday = `<li>Фізика</li>
-		     		<li>Хімія</li>
+		     		<li class='lesson'>Хімія</li>
 		     		<li>Історія У.</li>
 		     		<li>Зарубіжна</li>
-		     		<li>Алгебра</li>
+		     		<li class='lesson'>Алгебра</li>
 		     		<li>Англ-мова</li>
-		     		<li>Укр-літ</li>`;
+		     		<li class='lesson'>Укр-літ</li>`;
 
   const tuesday = `<li>З.У.</li>
 					<li>Фіз-ра</li>
@@ -90,7 +90,7 @@ const renderDayBook = () => {
   	table.innerHTML = friday;
   }
   else{
-    table.innerHTML = `<li style="list-style: none;font-size: 67px">Вихідні, іди гуляй дурачок</li>`;
+    table.innerHTML = `<li style="list-style: none;font-size: 65px">Вихідні, іди гуляй дурачок</li>`;
   }
 
 };
@@ -109,13 +109,13 @@ function renderLesson() {
   else if (date.getHours() == 10 && date.getMinutes() >= 55 || date.getHours() == 12 && date.getMinutes() <= 0) {
     document.querySelectorAll("ol li")[3].classList.add('lesson');
   }
-  else if (date.getHours() == 12 && date.getMinutes() <= 0 || date.getHours() == 13 && date.getMinutes() <= 5) {
+  else if (date.getHours() == 12 && date.getMinutes() >= 0 || date.getHours() == 13 && date.getMinutes() <= 5) {
     document.querySelectorAll("ol li")[4].classList.add('lesson');
   }
-  else if (date.getHours() == 13 && date.getMinutes() <= 5 || date.getHours() == 14 && date.getMinutes() <= 0) {
+  else if (date.getHours() == 13 && date.getMinutes() >= 5 || date.getHours() == 14 && date.getMinutes() <= 0) {
     document.querySelectorAll("ol li")[5].classList.add('lesson');
   }
-  else if (date.getHours() == 14 && date.getMinutes() <= 0 || date.getHours() == 15 && date.getMinutes() <= 55) {
+  else if (date.getHours() == 14 && date.getMinutes() >= 0 || date.getHours() == 15 && date.getMinutes() <= 55) {
     document.querySelectorAll("ol li")[6].classList.add('lesson');
   }
   else{
