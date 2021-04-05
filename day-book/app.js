@@ -33,12 +33,12 @@ var date = new Date();
 const renderDayBook = () => {
 
   const monday = `<li>Фізика</li>
-		     		<li class='lesson'>Хімія</li>
+		     		<li>Хімія</li>
 		     		<li>Історія У.</li>
 		     		<li>Зарубіжна</li>
-		     		<li class='lesson'>Алгебра</li>
+		     		<li>Алгебра</li>
 		     		<li>Англ-мова</li>
-		     		<li class='lesson'>Укр-літ</li>`;
+		     		<li>Укр-літ</li>`;
 
   const tuesday = `<li>З.У.</li>
 					<li>Фіз-ра</li>
