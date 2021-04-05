@@ -15,6 +15,8 @@ $(function(){
 
 var date = new Date();
 
+
+
   let days = function (day) {
     switch (day) {
       case 0: return"Неділя";
@@ -24,53 +26,53 @@ var date = new Date();
       case 4: return"Четвер";
       case 5: return"П'ятниця";
       case 6: return"Субота";
-      default: return "Вихідні, іди гуляй дурачок";
+      default: return "Х'юстон у на проблєми";
     }
   }
 
 const renderDayBook = () => {
 
-  const monday = `<tr><td class="lesson">1.</td><td>Фізика</td></tr>
-		     		<tr><td class="lesson">2.</td><td>Хімія</td></tr>
-		     		<tr><td class="lesson">3.</td><td>Історія У.</td></tr>
-		     		<tr><td class="lesson">4.</td><td>Зарубіжна</td></tr>
-		     		<tr><td class="lesson">5.</td><td>Алгебра</td></tr>
-		     		<tr><td class="lesson">6.</td><td>Англ-мова</td></tr>
-		     		<tr><td class="lesson">7.</td><td>Укр-літ</td></tr>`;
+  const monday = `<li>Фізика</li>
+		     		<li>Хімія</li>
+		     		<li>Історія У.</li>
+		     		<li>Зарубіжна</li>
+		     		<li>Алгебра</li>
+		     		<li>Англ-мова</li>
+		     		<li>Укр-літ</li>`;
 
-  const tuesday = `<tr><td class="lesson">1.</td><td>З.У.</td></tr>
-					<tr><td class="lesson">2.</td><td>Фіз-ра</td></tr>
-					<tr><td class="lesson">3.</td><td>Фізика</td></tr>
-					<tr><td class="lesson">4.</td><td>Труди</td></tr>
-			 		<tr><td class="lesson">5.</td><td>Всесвітня</td></tr>
-		     		<tr><td class="lesson">6.</td><td>Укр-мова</td></tr>
-		     		<tr><td class="lesson">7.</td><td>Укр-літ</td></tr>`;
+  const tuesday = `<li>З.У.</li>
+					<li>Фіз-ра</li>
+					<li>Фізика</li>
+					<li>Труди</li>
+			 		<li>Всесвітня</li>
+		     		<li>Укр-мова</li>
+		     		<li>Укр-літ</li>`;
 
-  const wednesday = `<td class="lesson">1.</td><td>Інформатика</td></tr>
-			    	<tr><td class="lesson">2.</td><td>З.У.</td></tr>
-			  		<tr><td class="lesson">3.</td><td>Фіз-ра</td></tr>
-		    		<tr><td class="lesson">4.</td><td>Укр-мова</td></tr>
-		     		<tr><td class="lesson">5.</td><td>Фізика</td></tr>
-		     		<tr><td class="lesson">6.</td><td>Біологія</td></tr>
-		    		<tr><td class="lesson">7.</td><td>Біологія</td></tr>`;
+  const wednesday = `<li>Інформатика</li>
+			    	<li>З.У.</li>
+			  		<li>Фіз-ра</li>
+		    		<li>Укр-мова</li>
+		     		<li>Фізика</li>
+		     		<li>Біологія</li>
+		    		<li>Біологія</li>`;
 
-  const thursday = `<tr><td class="lesson">1.</td><td>Фіз-ра</td></tr>
-		 			<tr><td class="lesson">2.</td><td>Укр-мова</td></tr>
-					<tr><td class="lesson">3.</td><td>Укр-літ</td></tr>
-					<tr><td class="lesson">4.</td><td>Географія</td></tr>
-					<tr><td class="lesson">5.</td><td>Алгебра</td></tr>
-					<tr><td class="lesson">6.</td><td>Геометрія</td></tr>`;
+  const thursday = `<li>Фіз-ра</li>
+		 			<li>Укр-мова</li>
+					<li>Укр-літ</li>
+					<li>Географія</li>
+					<li>Алгебра</li>
+					<li>Геометрія</li>`;
 
-  const friday = `<tr><td class="lesson">1.</td><td>Англ-мова</td></tr>
-			 		<tr><td class="lesson">2.</td><td>Фізика</td></tr>
-		     		<tr><td class="lesson">3.</td><td>Нім-мова</td></tr>
-		     		<tr><td class="lesson">4.</td><td>Хімія</td></tr>
-		     		<tr><td class="lesson">5.</td><td>Укр-мова</td></tr>
-		     		<tr><td class="lesson">6.</td><td>Укр-літ</td></tr>
-		     		<tr><td class="lesson">7.</td><td>Інформатика</td></tr>`;
+  const friday = `<li>Англ-мова</li>
+			 		  <li>Фізика</li>
+		     		<li>Нім-мова</li>
+		     		<li>Хімія</li>
+		     		<li>Укр-мова</li>
+		     		<li>Укр-літ</li>
+		     		<li>Інформатика</li>`;
 
   document.querySelector(".date h1").innerHTML = days(date.getDay());
-  const table = document.querySelector("tbody");
+  const table = document.querySelector(".tables ol");
 
   if (date.getDay() == 1) {
   	table.innerHTML = monday;
@@ -88,20 +90,46 @@ const renderDayBook = () => {
   	table.innerHTML = friday;
   }
   else{
-    table.innerHTML = "Вихідні, іди гуляй дурачок"
+    table.innerHTML = `<li style="list-style: none;font-size: 67px">Вихідні, іди гуляй дурачок</li>`;
   }
 
 };
 renderDayBook();
 
+function renderLesson() {
+  if (date.getHours() == 8 && date.getMinutes() >= 0 || date.getHours() == 8 && date.getMinutes() <= 45) {
+    document.querySelectorAll("ol li")[0].classList.add('lesson');
+  }
+  else if (date.getHours() == 8 && date.getMinutes() >= 45 || date.getHours() == 9 && date.getMinutes() <= 50) {
+    document.querySelectorAll("ol li")[1].classList.add('lesson');
+  }
+  else if (date.getHours() == 9 && date.getMinutes() >= 50 || date.getHours() == 10 && date.getMinutes() <= 55) {
+    document.querySelectorAll("ol li")[2].classList.add('lesson');
+  }
+  else if (date.getHours() == 10 && date.getMinutes() >= 55 || date.getHours() == 12 && date.getMinutes() <= 0) {
+    document.querySelectorAll("ol li")[3].classList.add('lesson');
+  }
+  else if (date.getHours() == 12 && date.getMinutes() <= 0 || date.getHours() == 13 && date.getMinutes() <= 5) {
+    document.querySelectorAll("ol li")[4].classList.add('lesson');
+  }
+  else if (date.getHours() == 13 && date.getMinutes() <= 5 || date.getHours() == 14 && date.getMinutes() <= 0) {
+    document.querySelectorAll("ol li")[5].classList.add('lesson');
+  }
+  else if (date.getHours() == 14 && date.getMinutes() <= 0 || date.getHours() == 15 && date.getMinutes() <= 55) {
+    document.querySelectorAll("ol li")[6].classList.add('lesson');
+  }
+  else{
+    console.log('F')
+  }
+};
+renderLesson();
+
 document.querySelector(".prev").addEventListener("click", () => {
   date = new Date(date.getFullYear(), date.getMonth(), (date.getDate()-1));
   renderDayBook();
-  console.log(date);
 });
 
 document.querySelector(".next").addEventListener("click", () => {
   date = new Date(date.getFullYear(), date.getMonth(), (date.getDate()+1));
   renderDayBook();
-  console.log(date);
 });

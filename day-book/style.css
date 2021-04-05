@@ -11,16 +11,19 @@ body {
     color: #f9fbf3;
 }
 
-table {
+ol {
     font-size: 70px;
     border-collapse: collapse;
     background: #341a3d;
     border-radius: 25px 0px 25px 0px;
+    list-style-position: inside; 
+    width: 65%;  
 }
-
-tbody {
+li {
     margin: 20px;
-    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 97%;
 }
 
 .container {
@@ -72,11 +75,6 @@ tbody {
     text-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 50%);
 }
 
-.lesson {
-    width: 75px;
-    text-align: center;
-}
-
 .menu-time{
   position: fixed;
   left: 0;
@@ -120,7 +118,6 @@ tbody {
 
 .menu-btn-on {
   background: #b646f0;
-  color: #f9fbf3;
   border-radius: 50%;
   width: 150px;
   height: 150px;
@@ -146,7 +143,7 @@ tbody {
   align-items: center;
 }
 
-.collumn-block--info>.inner{
+.inner{
     width: 100%;
     height: 75%;
     display: flex;
@@ -158,6 +155,17 @@ tbody {
 
 .far, .fas{
     font-size: 100px;
+}
+
+.lesson::before {
+    background-color: #b646f0;
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    right: -40px;
+    bottom: -20px;
+    transform: rotate(45deg);
 }
 
 @keyframes animate {
