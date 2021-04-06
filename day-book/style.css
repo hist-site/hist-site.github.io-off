@@ -17,8 +17,9 @@ ol {
     background: #341a3d;
     border-radius: 25px 0px 25px 0px;
     list-style-position: inside; 
-    width: 65%;
+    padding: 10px 60px 10px 60px;
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+    font-weight: 550;
 }
 li {
     margin: 20px;
@@ -61,7 +62,7 @@ li {
 
 .days h1 {
   font-size: 5rem;
-  font-weight: 400;
+  font-weight: 550;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   margin-bottom: 1rem;
@@ -114,7 +115,7 @@ li {
 
 .menu-time-header h1{
     font-size: 5rem;
-    font-weight: 400;
+    font-weight: 550;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     margin-bottom: 1rem;
@@ -126,7 +127,7 @@ li {
     display: flex;
     font-size: 5rem;
     position: absolute;
-    top: 15%;
+    top: 13%;
     border-radius: 20px;
     justify-content: center;
     box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 40%);

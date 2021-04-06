@@ -90,7 +90,7 @@ const renderDayBook = () => {
   	table.innerHTML = friday;
   }
   else{
-    table.innerHTML = `<li style="list-style: none;font-size: 65px">Вихідні, іди гуляй дурачок</li>`;
+    table.innerHTML = `<li style="list-style: none;">Вихідні, іди гуляй дурачок</li>`;
   }
 
   if (date.getHours() !== date.getHours() + 1 && date.getMinutes() !== date.getMinutes() + 1) {
