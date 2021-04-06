@@ -149,7 +149,7 @@ function Clock() {
 
   clock.textContent = clockString;
 };
-setInterval(Clock, 1000);
+setInterval(Clock, 500);
 
 
 document.querySelector(".prev").addEventListener("click", () => {
