@@ -4,11 +4,16 @@
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
+ 
+html {
+    background-color: #221126;
+}
 
 body {
     background: url('back-groung.png'), #221126;
     height: 95vh;
     color: #f9fbf3;
+    opacity: 1;
 }
 
 ol {
