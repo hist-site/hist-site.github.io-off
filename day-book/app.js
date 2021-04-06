@@ -96,6 +96,38 @@ const renderDayBook = () => {
 };
 renderDayBook();
 
+function renderLesson() {
+  var time = new Date();
+  var h = time.getHours();
+  var m = time.getMinutes();
+
+  if ( h == 8 && m >= 0 || h == 8 && m <= 45) {
+    document.querySelectorAll(".tables ol li")[0].classList.add('lesson');
+  }
+  else if ( h == 8 && m >= 45 || h == 9 && m <= 50) {
+    document.querySelectorAll(".tables ol li")[1].classList.add('lesson');
+  }
+  else if ( h == 9 && m >= 50 || h == 10 && m <= 55) {
+    document.querySelectorAll(".tables ol li")[2].classList.add('lesson');
+  }
+  else if ( h == 10 && m >= 55 || h == 12 && m <= 0) {
+    document.querySelectorAll(".tables ol li")[3].classList.add('lesson');
+  }
+  else if ( h == 12 && m >= 0 || h == 13 && m <= 5) {
+    document.querySelectorAll(".tables ol li")[4].classList.add('lesson');
+  }
+  else if ( h == 13 && m >= 5 || h == 14 && m <= 0) {
+    document.querySelectorAll(".tables ol li")[5].classList.add('lesson');
+  }
+  else if ( h == 14 && m >= 0 || h == 15 && m <= 55) {
+    document.querySelectorAll("ol li")[6].classList.add('lesson');
+  }
+  else {
+    console.log("renderLesson FAIL")
+  }
+};
+setInterval(renderLesson, 100);
+
 function Clock() {
   var time = new Date();
   var h = time.getHours().toString();
