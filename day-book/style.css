@@ -24,7 +24,6 @@ ol {
 li {
     margin: 20px;
     position: relative;
-    overflow: hidden;
     width: 97%;
 }
 
@@ -173,17 +172,6 @@ li {
 
 .far, .fas{
     font-size: 100px;
-}
-
-.lesson::before {
-    background-color: #b646f0;
-    content: "";
-    position: absolute;
-    width: 125px;
-    height: 125px;
-    right: -40px;
-    bottom: -20px;
-    transform: rotate(45deg);
 }
 
 @keyframes animate {

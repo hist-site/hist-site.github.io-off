@@ -15,9 +15,10 @@ $(function(){
 
 var date = new Date();
 
+var clock = document.getElementById("clock");
 
 
-  let days = function (day) {
+  var days = function (day) {
     switch (day) {
       case 0: return"Неділя";
       case 1: return"Понеділок";
@@ -31,6 +32,9 @@ var date = new Date();
   }
 
 const renderDayBook = () => {
+
+  document.querySelector(".date h1").innerHTML = days(date.getDay());
+  const table = document.querySelector(".tables ol");
 
   const monday = `<li>Фізика</li>
 		     		<li>Хімія</li>
@@ -71,9 +75,6 @@ const renderDayBook = () => {
 		     		<li>Укр-літ</li>
 		     		<li>Інформатика</li>`;
 
-  document.querySelector(".date h1").innerHTML = days(date.getDay());
-  const table = document.querySelector(".tables ol");
-
   if (date.getDay() == 1) {
   	table.innerHTML = monday;
   }
@@ -92,45 +93,8 @@ const renderDayBook = () => {
   else{
     table.innerHTML = `<li style="list-style: none;">Вихідні, іди гуляй дурачок</li>`;
   }
-
-  if (date.getHours() !== date.getHours() + 1 && date.getMinutes() !== date.getMinutes() + 1) {
-    document.querySelector(".time h1").innerHTML = date.getHours() + ":" + date.getMinutes();
-  }
-  else {
-    console.log('F')
-  }
 };
 renderDayBook();
-
-function renderLesson() {
-  if (date.getHours() == 8 && date.getMinutes() >= 0 || date.getHours() == 8 && date.getMinutes() <= 45) {
-    document.querySelectorAll("ol li")[0].classList.add('lesson');
-  }
-  else if (date.getHours() == 8 && date.getMinutes() >= 45 || date.getHours() == 9 && date.getMinutes() <= 50) {
-    document.querySelectorAll("ol li")[1].classList.add('lesson');
-  }
-  else if (date.getHours() == 9 && date.getMinutes() >= 50 || date.getHours() == 10 && date.getMinutes() <= 55) {
-    document.querySelectorAll("ol li")[2].classList.add('lesson');
-  }
-  else if (date.getHours() == 10 && date.getMinutes() >= 55 || date.getHours() == 12 && date.getMinutes() <= 0) {
-    document.querySelectorAll("ol li")[3].classList.add('lesson');
-  }
-  else if (date.getHours() == 12 && date.getMinutes() >= 0 || date.getHours() == 13 && date.getMinutes() <= 5) {
-    document.querySelectorAll("ol li")[4].classList.add('lesson');
-  }
-  else if (date.getHours() == 13 && date.getMinutes() >= 5 || date.getHours() == 14 && date.getMinutes() <= 0) {
-    document.querySelectorAll("ol li")[5].classList.add('lesson');
-  }
-  else if (date.getHours() == 14 && date.getMinutes() >= 0 || date.getHours() == 15 && date.getMinutes() <= 55) {
-    document.querySelectorAll("ol li")[6].classList.add('lesson');
-  }
-  else {
-    console.log('F')
-  }
-};
-renderLesson();
-
-var clock = document.getElementById("clock");
 
 function Clock() {
   var time = new Date();
@@ -150,7 +114,6 @@ function Clock() {
   clock.textContent = clockString;
 };
 setInterval(Clock, 500);
-
 
 document.querySelector(".prev").addEventListener("click", () => {
   date = new Date(date.getFullYear(), date.getMonth(), (date.getDate()-1));
