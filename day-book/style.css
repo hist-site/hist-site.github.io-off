@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    height: 95vh;
+    height: 94vh;
     color: #f9fbf3;
     opacity: 1;
 }
@@ -142,7 +142,7 @@ li {
   width: 150px;
   height: 150px;
   position: fixed;
-  bottom: 40px;
+  bottom: 35px;
   right: 30px;
   text-align: center;
   cursor: pointer;
