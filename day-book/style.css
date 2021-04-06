@@ -120,6 +120,18 @@ li {
     margin-bottom: 1rem;
 }
 
+.time {
+    background-color: #341a3d;
+    width: 60%;
+    display: flex;
+    font-size: 5rem;
+    position: absolute;
+    top: 12%;
+    border-radius: 20px;
+    justify-content: center;
+    box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 40%);
+}
+
 .menu-btn-on {
   background: #b646f0;
   border-radius: 50%;
@@ -140,11 +152,12 @@ li {
   width: 150px;
   height: 150px;
   position: fixed;
-  bottom: 20px;
+  bottom: 35px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 40%);
 }
 
 .inner{

@@ -93,6 +93,12 @@ const renderDayBook = () => {
     table.innerHTML = `<li style="list-style: none;font-size: 65px">Вихідні, іди гуляй дурачок</li>`;
   }
 
+  if (date.getHours() !== date.getHours() + 1 && date.getMinutes() !== date.getMinutes() + 1) {
+    document.querySelector(".time h1").innerHTML = date.getHours() + ":" + date.getMinutes();
+  }
+  else {
+    console.log('F')
+  }
 };
 renderDayBook();
 
@@ -118,11 +124,33 @@ function renderLesson() {
   else if (date.getHours() == 14 && date.getMinutes() >= 0 || date.getHours() == 15 && date.getMinutes() <= 55) {
     document.querySelectorAll("ol li")[6].classList.add('lesson');
   }
-  else{
+  else {
     console.log('F')
   }
 };
 renderLesson();
+
+var clock = document.getElementById("clock");
+
+function Clock() {
+  var time = new Date();
+  var h = time.getHours().toString();
+  var m = time.getMinutes().toString();
+
+  if (h.length < 2) {
+    h = '0' + h;
+  }
+
+  if (m.length < 2) {
+    m = '0' + m;
+  }
+
+  var clockString = h + ":" + m;
+
+  clock.textContent = clockString;
+};
+setInterval(Clock, 1000);
+
 
 document.querySelector(".prev").addEventListener("click", () => {
   date = new Date(date.getFullYear(), date.getMonth(), (date.getDate()-1));
