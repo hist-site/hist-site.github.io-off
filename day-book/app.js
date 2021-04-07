@@ -122,9 +122,7 @@ function renderLesson() {
   else if ( h == 14 && m >= 0 || h == 15 && m <= 55) {
     document.querySelectorAll("ol li")[6].classList.add('lesson');
   }
-  else {
-    console.log("renderLesson FAIL")
-  }
+  else {}
 };
 setInterval(renderLesson, 100);
 
